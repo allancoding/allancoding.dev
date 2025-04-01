@@ -17,6 +17,7 @@ export default defineNuxtConfig({
         { property: 'og:url', content: 'https://allancoding.dev/' },
         { property: 'og:image', content: 'https://allancoding.dev/logos/allancoding.png' },
         { name: 'description', content: 'Allancoding the cool coder!' },
+        { name: 'theme-color', content: '#00ff00' }
       ]
     },
     pageTransition: { name: 'page', mode: 'out-in' }
