@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cedar City Junior Ballet Image Getter</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .btn {
+            cursor: move;
+            display: inline-block;
+            font-size: 48px;
+            margin-bottom: 3rem;
+            color: #000000;
+            background-color: #ffffff;
+            border-color: #000000;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 0.3rem;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:(function(){var other=$('#qs-slideshow-viewholder-1');var other1=$('#qs-slideshow-viewholder-2');var othertxt=$('#qs-slideshow-overlay-qsi-title').text();var img1;var img;$('body').append('<a id=&quot;imgdownload&quot; href=&quot;//&quot; download=&quot;'+'p_'+othertxt+'&quot;></a>');var linkd=$('#imgdownload');if(other1.hasClass('none')){img=other.find('img').prop('src');imgurl(img)}else if(other.hasClass('none')){img1=other1.find('img').prop('src');imgurl(img1)}else{alert('error!');linkd.remove()}function imgurl(img){convertImgToBase64URL(img,function(base64Img){linkd.attr('href',base64Img);linkd[0].click();linkd.remove()})}function convertImgToBase64URL(url,callback,outputFormat){var img=new Image();img.crossOrigin='Anonymous';img.onload=function(){var canvas=document.createElement('CANVAS'),ctx=canvas.getContext('2d'),dataURL;canvas.height=img.height;canvas.width=img.width;ctx.drawImage(img,0,0);dataURL=canvas.toDataURL(outputFormat);callback(dataURL);canvas=null};img.src=url}})();" class="btn">Cedar City Junior Ballet Image Getter</a>
+</body>
+</html>

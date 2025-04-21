@@ -1,0 +1,1678 @@
+<style>
+	/* DONT TOUCH ANY OF THESE INFORMATION */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* END OF UNTOUCHABLE INFORMATION */
+
+
+.back-faq {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/test.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    order: 1;
+}
+
+/*-------------------------------------------- STYLING FOR HEADER ----------------------------------------------*/
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.container {
+  width: 100%;
+  max-width: 117rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.menu-icons {
+  color: #eee;
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1500;
+  display: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 8rem;
+  border-bottom: 1px solid rgba(225, 225, 225, 0.1);
+}
+
+.logo {
+  display: flex;
+  margin-right: 5rem;
+}
+
+.nav-list {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.nav-list li {
+  line-height: 8rem;
+  position: relative;
+}
+
+.sub-menu li {
+  line-height: 4rem;
+}
+
+.nav-list a {
+  display: block;
+  color: white;
+  background-color: #1e90ff;
+  padding: 0 1.5rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  transition: color 650ms;
+  transition: background-color 650ms;
+}
+
+.nav-list a:hover {
+  color: black;
+  background-color: yellow;
+}
+
+.cart {
+  height: 30px;
+  width: 40px;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-bottom: 5px;
+}
+
+.btn {
+  padding: 1.3rem;
+  display: inline-block;
+  background-color: #1e90ff;
+  border: 2px solid #1e90ff;
+  border-radius: 5rem;
+  transition: background-color 650ms;
+}
+
+.btn:hover {
+  color: black;
+  background-color: yellow;
+}
+
+.sub-menu {
+  width: 20rem;
+  display: block;
+  position: absolute;
+  border-top: 3px solid #00bfff;
+  z-index: 100;
+  top: 16rem;
+  transition: all 650ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sub-menu::before {
+  content: "";
+  position: absolute;
+  top: -2.5rem;
+  left: 3rem;
+  border: 1.2rem solid transparent;
+  border-bottom-color: #00bfff;
+}
+
+.sub-menu .sub-menu::before {
+  top: 0.9rem;
+  left: -2.5rem;
+  border: 1.2rem solid transparent;
+  border-right-color: #00bfff;
+}
+
+.sub-menu .sub-menu {
+  border-top: none;
+  border-left: 3px solid #00bfff;
+  top: 0;
+  left: 160%;
+}
+
+.nav-list li:hover > .sub-menu {
+  top: 8rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.sub-menu li:hover > .sub-menu {
+  top: 0;
+  left: 100%;
+}
+
+li.move-right {
+  margin: auto 0 auto auto;
+  line-height: initial;
+  transition: color 650ms;
+  transition: background-color 650ms;
+}
+/*-------------------------------------------- STYLING FOR HEADER END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+/*-------------------------------------------- STYLING FOR HOME PAGE ----------------------------------------------*/
+.slide-container {
+  position: relative;
+  width: 100%;
+  height: 25vh;
+  overflow: hidden;
+  border: 5px solid #1e90ff;
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2),
+    0 10px 30px 0 rgba(0, 0, 0, 0.19);
+}
+
+.slide-container .slider {
+  width: 500%;
+  height: 100%;
+}
+
+.slide-container .slider .slide {
+  width: 20%;
+  height: 100%;
+}
+
+.slide-container .slider .slide .caption {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 97%;
+  height: 90%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+}
+
+.slide-container .slider .slide .caption h2 {
+  padding: 0;
+  color: white;
+  font-size: 4em;
+}
+
+.slide-container .slider .slide .caption p {
+  color: white;
+  font-size: 1.5em;
+}
+
+.hero-container h2 {
+  color: white;
+  font-size: 50px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 3px 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.index-container {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/heroImage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-container h1 {
+    color: white;
+    border: 10px solid white;
+    font-size: 140px;
+}
+
+.back-home {
+    height: 200vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/test.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*-------------------------------------------- STYLING FOR HOME END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------- RESPONSIVENESS FOR HOME PAGE ----------------------------------------------*/
+@media (max-width: 730px) {
+    .index-container h1 {
+    color: white;
+    border: 10px solid white;
+    font-size: 40px;
+}
+}
+/*------------------------------------------- RESPONSIVENESS FOR HOME PAGE END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------- RESPONSIVENESS FOR HEADER ----------------------------------------------*/
+@media screen and (max-width: 1200px) {
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: none;
+    align-items: initial;
+    flex-direction: column;
+    background-color: #1e90ff;
+    z-index: 1000;
+    overflow-y: scroll;
+  }
+
+  .nav-list li {
+    line-height: 6rem;
+  }
+
+  .sub-menu {
+    position: initial;
+    border: 3px solid transparent;
+    border-left-color: #00bfff;
+    margin-left: 1rem;
+    max-height: 0;
+	 display: none;
+  }
+
+  .sub-menu::before {
+    display: none;
+  }
+
+	.nav-list li:hover > .sub-menu {
+    visibility: hidden;
+  }
+	
+	.sub-menu-vis {
+    opacity: 1;
+	 display: block;
+    visibility: visible !important;
+    max-height: initial;
+  }
+
+  li.move-right {
+    margin: 0 auto 0 0;
+    line-height: initial;
+  }
+
+  .menu-icons {
+    display: block;
+  }
+
+  .fas fa-times {
+    display: none;
+  }
+	
+  .dropdown{
+	 cursor: pointer; 
+  }
+
+  nav.active .fas fa-times {
+    display: block;
+  }
+
+  nav.active .fas fa-bars {
+    display: none;
+  }
+
+  nav.active .nav-list {
+    display: flex;
+  }
+}
+/*-------------------------------------------- RESPONSIVENESS FOR HEADER END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------- STYLING FOR HORIZONTAL BARS ON HOME PAGE ----------------------------------------------*/
+.slide-container .slider .slide.business1 {
+  background: url(../images/business1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.slide-container .slider .slide.canvas1 {
+  background: url(../images/canvas1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.slide-container .slider .slide.embroidery1 {
+  background: url(../images/embroidery1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-container .slider .slide.engraving1 {
+  background: url(../images/engraving1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.slide-container .slider .slide.signs1 {
+  background: url(../images/signs1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.slide-container .slider .slide.apperal1 {
+  background: url(../images/apperal1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-btn {
+  text-align: center;
+  width: 100%;
+  height: 5rem;
+  border: none;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background-color: white;
+  transition: background-color 650ms;
+}
+
+.slide-btn:hover {
+  background-color: #1e90ff;
+  cursor: pointer;
+  transition: background-color 650ms;
+}
+
+/*-------------------------------------------- STYLING FOR HORIZONTAL BARS ON HOME PAGE END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------- RESPONSIVENESS FOR HORIZONTAL BARS ON HOMEPAGE ----------------------------------------------*/
+@media screen and (max-height: 400px) {
+  .slide-container .slider .slide .caption {
+    padding-top: 2px;
+  }
+  .slide-container .slider .slide .caption h2 {
+  padding: 0;
+  color: white;
+  font-size: 1.5em;
+}
+
+.slide-container .slider .slide .caption p {
+  color: white;
+  font-size: 1em;
+}
+.hero-btn {
+    position: relative;
+    top:-40px;
+    width: 100%;
+  }
+}
+/*-------------------------------------------- RESPONSIVENESS FOR HORIZONTAL BARS ON HOMEPAGE END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------- STYLING FOR FOOTER ----------------------------------------------*/
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer {
+  background-color: #1e90ff;
+  padding: 70px 0;
+}
+
+.footer-container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+li {
+  list-style: none;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  color: white;
+  text-transform: capatalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: white;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capatalize;
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  color: white;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: yellow;
+  padding-left: 8px;
+}
+
+.footer-col .social-links {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links:hover {
+  color: yellow;
+}
+/*-------------------------------------------- STYLING FOR FOOTER END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------- RESPONSIVENESS FOR FOOTER ----------------------------------------------*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+  }
+}
+/* Responsiveness for the footer DONT TOUCH */
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+  .slide-container .slider .slide .caption h2 {
+    font-size: 3em;
+  }
+  .slide-container .slider .slide .caption p {
+    font-size: 1.2em;
+  }
+}
+
+/*-------------------------------------------- RESPONSIVENESS FOR FOOTER END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------- STYLING FOR CONTACT PAGE ----------------------------------------------*/
+.back-container {
+  height: 150vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/heroImage.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form styling for contact page */
+.formContainer {
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+    border-left: solid 70px transparent; 
+    border-right: solid 70px transparent; 
+    border-bottom: solid 70px #fff;
+    filter: drop-shadow(0 0 30px #333);
+    z-index: 100;
+    
+}
+
+
+.formText {
+    color: black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #1e90ff;
+}
+
+.formContent {
+    margin-top: 5px;
+
+}
+
+/* Styling for the text inputs */
+input[type=text] {
+  font-size: 20px;
+  border: 2px solid #ccc;
+  width: 250px;
+  height: 50px;
+}
+
+/* Styling for info div */
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info h1 {
+    color: #1e90ff;
+}
+
+.info h2 {
+    color: white;
+}
+
+/* Styling for the icons */
+.icons {
+  display: flex;
+  align-items: flex-end;
+}
+.icons>i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: white;
+  padding: 28px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Styling for text area */
+textarea {
+  font-size: 15px;
+  border: 2px solid #ccc;
+  max-width: 250px;
+  min-width: 250px;
+  width: 250px;
+  max-height: 350px;
+  min-height: 100px;
+  height: 100px;
+}
+
+/* Styling for the submit button */
+input[type=submit] {
+  background-color: #1e90ff;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 75px;
+
+}
+/*-------------------------------------------- STYLING FOR CONTACT PAGE END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------- RESPONSIVENESS FOR CONTACT PAGE ----------------------------------------------*/
+@media (max-width: 1011px) {
+    .back-container {
+  height: 200vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/heroImage.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+    
+}
+/*-------------------------------------------- RESPONSIVENESS FOR CONTACT PAGE END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------- STYLING FOR PARTNER PAGE ----------------------------------------------*/
+.partner-container {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/heroImage.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.partner-container h1 {
+    color: white;
+    letter-spacing: 3px;
+    border: 10px solid white;
+    font-size: 150px;
+}
+
+.partner-container h2 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 40px;
+}
+
+.partner {
+    display: flex;
+    flex-direction: row;
+    order: 2;
+}
+
+.back-partners {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/test.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+.back-partners img {
+    height: 30%; 
+    width: 20%; 
+    background-color: rgba(0,0,0,0.5); 
+    padding: 5px; 
+    margin-top: 10px; 
+    border: 2px solid white;
+}
+/*-------------------------------------------- STYLING FOR PARTNER PAGE END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------- RESPONSIVENESS FOR PARTNER PAGE  ----------------------------------------------*/
+@media (max-width: 730px) {
+    .partner-container h1 {
+    color: white;
+    letter-spacing: 3px;
+    border: 10px solid white;
+    font-size: 50px;
+}
+    
+    .partner-container h2 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+}
+
+@media (max-width: 414px) {
+    .partner-container h1 {
+    color: white;
+    letter-spacing: 3px;
+    border: 10px solid white;
+    font-size: 50px;
+}
+    
+    .partner-container h2 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+    .back-partners img {
+    height: 15%; 
+    width: 25%; 
+    background-color: rgba(0,0,0,0.5); 
+    padding: 5px; 
+    margin-top: 10px; 
+    border: 2px solid white;
+}
+}
+
+@media (min-width: 1300px) {
+    .partner-container h1 {
+    color: white;
+    letter-spacing: 3px;
+    border: 10px solid white;
+    font-size: 50px;
+}
+    
+    .partner-container h2 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+    .back-partners img {
+    height: 15%; 
+    width: 20%; 
+    background-color: rgba(0,0,0,0.5); 
+    padding: 5px; 
+    margin-top: 10px; 
+    border: 2px solid white;
+}
+}
+
+@media (min-width: 1024px) {
+    .partner-container h1 {
+    color: white;
+    letter-spacing: 3px;
+    border: 10px solid white;
+    font-size: 50px;
+}
+    
+    .partner-container h2 {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+    .back-partners img {
+    height: 15%; 
+    width: 20%; 
+    background-color: rgba(0,0,0,0.5); 
+    padding: 5px; 
+    margin-top: 10px; 
+    border: 2px solid white;
+}
+}
+/*-------------------------------------------- RESPONSIVENESS FOR PARTNER PAGE END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------- STYLING FOR ABOUT PAGE ----------------------------------------------*/
+.about-container {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/heroImage.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container h1 {
+    color: white;
+    border: 10px solid white;
+    letter-spacing: 3px;
+    font-size: 150px;
+}
+
+.back-about {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/test.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us {
+    display:flex;
+    height: 650px;
+    width: 750px;
+    order: 1;
+    flex-direction: column;
+}
+
+.about-us-img {
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    order: 2;
+}
+
+.about-page {
+    display: flex;
+    flex-direction: row;
+    order: 2;
+}
+
+.about-info {
+    width: 50%;
+}
+/*-------------------------------------------- STYLING FOR ABOUT PAGE END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------- RESPONSIVENESS FOR ABOUT PAGE ----------------------------------------------*/
+@media (max-width: 730px) {
+    .about-container h1 {
+    color: white;
+    letter-spacing: 3px;
+    border: 10px solid white;
+    font-size: 50px;
+}
+}
+
+@media (max-width: 730px) {
+    .back-about {
+    height: 300vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/test.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us {
+    display:flex;
+    height: 550px;
+    width: 400px;
+    order: 1;
+    flex-direction: column;
+}
+
+.about-us-img {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    order: 1;
+}
+
+.bottom-img {
+    margin-top: 10px;
+}
+
+.top-img {
+    margin-left: 100px;
+}
+    
+    
+    
+}
+/*-------------------------------------------- RESPONSIVENESS FOR ABOUT PAGE END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------- STYLING FOR TABLE -------------------------------------- */
+/* Table container */
+.tableContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;;
+}
+
+/* Contents of the table that are being style */
+.tableContents {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    flex-direction: row;
+}
+
+.tableContents table {
+    border-collapse: collapse;
+}
+
+.tableContents th {
+    background-color: #1e90ff;
+    color: white;
+    border: 1px solid black;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 25px;
+}
+
+.tableContents td {
+    padding: 8px;
+    border: 1px solid black;
+}
+
+
+
+.tableContents tr {
+    background-color: #F0F8FF;
+    color: black;
+    border: 1px solid black;
+    font-size: 15px;
+    
+}
+
+.tableContents tr:hover {
+    background-color: white;
+
+}
+
+table tr:nth-child(odd) {
+  background-color: #DCDCDC;
+}
+
+
+/* Fixing margins for phone */
+.tablePhoneFix {
+        margin-left: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+/* ----------------------------- STYLING FOR TABLE END -------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------- STYLING FOR HERO IMAGE BANNER -------------------------------------- */
+.back-test {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/heroImage.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* ----------------------------- STYLING FOR HERO IMAGE BANNER END -------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------- TABLE RESPONSIVENESS ----------------------------------------------*/
+@media (max-width: 730px) {
+    .tableContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .tableContents {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        flex-direction: column;
+        margin-left: 10px;
+}
+
+    .tableContents th {
+        background-color: #1e90ff;
+        color: white;
+        border: 1px solid black;
+        padding: 8px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 20px;
+}
+
+
+    .tableContents tr {
+        background-color: #F0F8FF;
+        color: black;
+        border: 1px solid black;
+        font-size: 15px;
+    
+}
+    .tablePhoneFix {
+        margin-top: 10px;
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .back-test {
+        height: 200vh;
+        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/heroImage.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+}
+
+}
+/*------------------------------------------- TABLE RESPONSIVENESS END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------- TABLE FOR SIGNS RESPONSIVENESS ----------------------------------------------*/
+@media (max-width: 730px) {
+/* Table container for signs page */
+.tableContainerSigns {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;;
+}
+
+/* Contents of the signs table that are being styled */
+.tableContentsSigns {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.tableContentsSigns table {
+    border-collapse: collapse;
+}
+
+.tableContentsSigns th {
+    background-color: #1e90ff;
+    color: white;
+    border: 1px solid black;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 25px;
+}
+
+.tableContentsSigns td {
+    padding: 8px;
+    border: 1px solid black;
+}
+
+
+
+.tableContentsSigns tr {
+    background-color: #F0F8FF;
+    color: black;
+    border: 1px solid black;
+    font-size: 15px;
+    
+}
+
+}
+/*------------------------------------------- TABLE FOR SIGNS RESPONSIVENESS END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------- TABLE FOR CANVAS RESPONSIVENESS ----------------------------------------------*/
+@media (max-width: 730px) {
+/* Table container */
+.tableContainerCanvas {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;;
+}
+
+/* Contents of the table that are being style */
+.tableContentsCanvas {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.tableContentsCanvas table {
+    border-collapse: collapse;
+}
+
+.tableContentsCanvas th {
+    background-color: #1e90ff;
+    color: white;
+    border: 1px solid black;
+    padding: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 15px;
+}
+
+.tableContentsCanvas td {
+    padding: 8px;
+    border: 1px solid black;
+}
+
+
+
+.tableContentsCanvas tr {
+    background-color: #F0F8FF;
+    color: black;
+    border: 1px solid black;
+    font-size: 10px;
+    
+}
+
+
+/* Fixing margins for phone */
+.tablePhoneFixCanvas {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*------------------------------------------- TABLE FOR CANVAS RESPONSIVENESS END ----------------------------------------------*/
+
+
+
+
+
+
+
+
+
+/* ----------------------------- STYLING FOR FAQ PAGE -------------------------------------- */
+.back-faq {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/test.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    order: 1;
+}
+
+.faq-questions {
+    display:flex;
+    flex-direction: column;
+    order: 1;
+}
+
+.bottom-img {
+    margin-left: 100px;
+}
+/* ----------------------------- STYLING FOR FAQ PAGE END -------------------------------------- */
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Meta Data *IGNORE* !-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css1/styler.css">
+    <script src="javascript/script.js" defer></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   <!-- Header !-->
+  <?php //include ('header.php') ?>
+<title>Home</title>
+<link rel="stylesheet" href="css1/indexCSS.css">
+</head>
+<!-- <body>!-->
+<!-- Header !-->
+    <header>
+        <div style="background-color: #1E90FF;" class="container-fluid">
+            <nav>
+                <div class="menu-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <a href="index.php" class="logo">
+                    <img class="logo" src="images/logo_trans.png" alt="logo" style="height: 75px;">
+                </a>
+                <ul class="nav-list">
+                    <!-- Normal listing buttons !-->
+                    <li>
+                        <a href="index.php">Home</a>
+                    </li>
+                    <li>
+                        <a class="dropdown">Services
+                            <i class="fas fa-sort-down"></i>
+                        </a>
+                        <!-- Drop Down List !-->
+                        <ul id="drop-sub" class="sub-menu">
+                            <li>
+                                <a href="businessPrintingPage1.php">Business Printing</a>
+                            </li>
+                            <li>
+                                <a href="canvasPrintingPage1.php">Canvas Printing</a>
+                            </li>
+                            <li>
+                                <a href="embroideryPage1.php">Embroidery</a>
+                            </li>
+                            <li>
+                                <a href="engravingPage1.php">Engraving</a>
+                            </li>
+                            <li>
+                                <a href="signsPage1.php">Signs</a>
+                            </li>
+                            <li>
+                                <a href="apperalPage1.php">Custom Apperal</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Normal listing buttons !-->
+                    <li>
+                        <a href="Promotions.php">Promotions</a>
+                    </li>
+
+                    <li>
+                        <a href="partners.php">Partners</a>
+                    </li>
+
+                    <li>
+                        <a href="aboutUs.php">About Us</a>
+                    </li>
+                    
+                    <li>
+                        <a href="contactUs.php">Contact Us</a>
+                    </li>
+                    
+                    
+                    <!-- Cart !-->
+                    <li class="move-right">
+                        <img class="cart" style="float: right;" src="images/new_cart.png" alt="Cart">
+                    </li>
+                    
+                
+                </ul>
+            </nav>
+        </div>
+    </header>
+  <!-- Hero Image/banner !-->
+  <div class="index-container">
+    <h1>Active Printing</h1>
+  </div>
+
+  <div class="back-home">
+    <!-- Business Printing banner and button !-->
+    <a href="businessPrintingPage1.php">
+      <div id="services" class="slide-container">
+        <div class="slider">
+          <div class="slide business1">
+            <div class="caption">
+              <i class="fas fa-mouse fa-3x" style="float: right; color: white;"></i>
+              <h2>Business Printing</h2>
+              <p>We service all your printing needs. Business cards, flyers, invoices and much more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Div to make some space between buttons/banners !-->
+    <div style="width: 100%; height: 5rem;">
+    </div>
+
+    <!-- Canvas Printing banner and button !-->
+    <a href="canvasPrintingPage1.php">
+      <div id="services" class="slide-container">
+        <div class="slider">
+          <div class="slide canvas1">
+            <div class="caption">
+              <i class="fas fa-mouse fa-3x" style="float: right; color: white;"></i>
+              <h2>Canvas Printing</h2>
+              <p>Canvas prints are a unique way to personalize any space and make great gifts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Div to make some space between buttons/banners !-->
+    <div style="width: 100%; height: 5rem;">
+    </div>
+
+    <!-- Embroidery banner and button !-->
+    <a href="embroideryPage1.php">
+      <div id="services" class="slide-container">
+        <div class="slider">
+          <div class="slide embroidery1">
+            <div class="caption">
+              <i class="fas fa-mouse fa-3x" style="float: right; color: white;"></i>
+              <h2>Embroidery</h2>
+              <p>Embroidery is the craft of decorating fabric or other materials using a needle to apply thread or yarn. Embroidery may also incorporate other materials such as pearls, beads, quills, and sequins.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Div to make some space between buttons/banners !-->
+    <div style="width: 100%; height: 5rem;">
+    </div>
+
+    <!-- Engraving banner and button !-->
+    <a href="engravingPage1.php">
+      <div id="services" class="slide-container">
+        <div class="slider">
+          <div class="slide engraving1">
+            <div class="caption">
+              <i class="fas fa-mouse fa-3x" style="float: right; color: white;"></i>
+              <h2>Engraving</h2>
+              <p>Engraving</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Div to make some space between buttons/banners !-->
+    <div style="width: 100%; height: 5rem;">
+    </div>
+
+    <!-- Signs and Banners banner and button !-->
+    <a href="signsPage1.php">
+      <div id="services" class="slide-container">
+        <div class="slider">
+          <div class="slide signs1">
+            <div class="caption">
+              <i class="fas fa-mouse fa-3x" style="float: right; color: white;"></i>
+              <h2>Signs and Banners</h2>
+              <p>Signs and Banners</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Div to make some space between buttons/banners !-->
+    <div style="width: 100%; height: 5rem;">
+    </div>
+
+    <!-- Apperal banner and button !-->
+    <a href="apperalPage1.php">
+      <div id="services" class="slide-container">
+        <div class="slider">
+          <div class="slide apperal1">
+            <div class="caption">
+              <i class="fas fa-mouse fa-3x" style="float: right; color: white;"></i>
+              <h2>Custom apperal</h2>
+              <p>Custom Apperal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Div to make some space between buttons/banners !-->
+    <div style="width: 100%; height: 5rem;">
+    </div>
+  </div>
+  <!-- Footer !-->
+  <?php //include('footer.php') ?>
+    <!-- Javascript for making a new navbar image for responsiveness !-->
+    <script src="javascript/script.js"></script>
+</head>
+<!-- </body> !-->
+	<script>
+	(function() {
+   		const selectElement = (element) => document.querySelector(element);
+
+selectElement('.menu-icons').addEventListener('click', () => {
+    selectElement('nav').classList.toggle('active');
+    });
+		
+var drop = document.querySelector(".dropdown");		
+drop.addEventListener("click", function() {
+var sub = document.querySelector("#drop-sub");	
+	if(sub.classList.contains("sub-menu-vis")){
+		document.getElementById("drop-sub").classList.remove("sub-menu-vis");
+		}else{
+		document.getElementById("drop-sub").classList.add("sub-menu-vis");
+	}
+});
+
+})();
+		</script>
