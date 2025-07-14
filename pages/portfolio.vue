@@ -375,6 +375,24 @@ const projects = {
         },
         {
             id: 5,
+            title: 'Perfect Paradox 8400 Website',
+            image: '/projects/perfectparadox8400.website.png',
+            discription: 'FTC Team Perfect Paradox 8400 website for outreach and information.',
+            buttons: [
+                {
+                    text: 'View',
+                    link: 'https://perfectparadox8400.github.io/',
+                    target: '_blank'
+                },
+                {
+                    text: 'Github',
+                    link: 'https://github.com/perfectparadox8400/perfectparadox8400.github.io',
+                    target: '_blank'
+                }
+            ]
+        },
+        {
+            id: 6,
             title: 'Chrome Racer',
             image: '/projects/racer.allancoding.dev.png',
             discription: 'Reverse engineered Chrome Experiment RACER.',
@@ -392,7 +410,7 @@ const projects = {
             ]
         },
         {
-            id: 6,
+            id: 7,
             title: 'Minecraft',
             image: '/projects/allancoding-minecraft.netlify.app.png',
             discription: 'Minecraft versions ported to the web.',
@@ -410,8 +428,8 @@ const projects = {
             ]
         },
         {
-            id: 7,
-            title: 'Old Website<span class="warning">Outdated</span>',
+            id: 8,
+            title: 'Old Website <span class="warning">Outdated</span>',
             image: '/projects/allancoding.dev.v1.png',
             discription: 'My very old website made in 2019.',
             buttons: [
@@ -423,26 +441,8 @@ const projects = {
             ]
         },
         {
-            id: 8,
-            title: 'Perfect Paradox 8400 Website<span class="warning" title="Work In Progress">WIP</span>',
-            image: '/projects/perfectparadox8400.website.png',
-            discription: 'FTC Team Perfect Paradox 8400 website for outreach and information.',
-            buttons: [
-                {
-                    text: 'View',
-                    link: 'https://perfectparadox8400.github.io/',
-                    target: '_blank'
-                },
-                {
-                    text: 'Github',
-                    link: 'https://github.com/perfectparadox8400/perfectparadox8400.github.io',
-                    target: '_blank'
-                }
-            ]
-        },
-        {
             id: 9,
-            title: 'PrismOS Website<span class="warning">Private</span>',
+            title: 'PrismOS Website <span class="warning">Private</span>',
             image: '/projects/prism.net.png',
             discription: 'The website for a linux distro that has full compatibility with Windows applications.',
             buttons: [
@@ -455,7 +455,7 @@ const projects = {
         },
         {
             id: 10,
-            title: 'EmulatorJS Maker<span class="warning">Archived</span>',
+            title: 'EmulatorJS Maker <span class="warning">Archived</span>',
             image: '/projects/emulatorjs-maker.png',
             discription: 'A EmulatorJS wraper to emulate games on your browser.',
             buttons: [
