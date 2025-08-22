@@ -49,7 +49,7 @@ useHead(() => ({
     z-index: 1;
     top: 0;
     width: 100%;
-    padding-top: 60px;
+    padding-top: 52px;
     text-align: center;
     color: #00ff00;
     text-shadow: 0 0 2px #00ff00, 0 0 10px #00ff00;
@@ -65,12 +65,12 @@ useHead(() => ({
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: calc(100svh - 60px);
-    min-height: calc(100svh - 60px);
+    height: calc(100svh - 52px);
+    min-height: calc(100svh - 52px);
     position: relative;
     overflow-x: auto;
     mask-image:
-        linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) calc(100% - 60px), rgba(0, 0, 0, 0) 100%),
+        linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) calc(100% - 52px), rgba(0, 0, 0, 0) 100%),
         linear-gradient(to left, black 15px, transparent 15px);
     transition: all 0.5s ease-in-out;
 }

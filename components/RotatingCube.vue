@@ -1,11 +1,10 @@
 <template>
     <div class="cube-container">
         <div ref="cube" class="cube">
-            <a v-for="(site, index) in sites" :key="index" :href="site.url" class="face" :class="faceClasses[index]"
+            <a v-for="(link, index) in links" :key="index" :href="link.url" class="face" :class="faceClasses[index]"
                 target="_blank">
-                <span class="label" :ref="setLabelRefs">{{ site.label }}</span>
+                <span class="label" :ref="setLabelRefs">{{ link.label }}</span>
             </a>
-
         </div>
     </div>
 </template>
@@ -13,63 +12,53 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const cube = ref(null)
-const labelElements = []
+const props = defineProps({
+    links: {
+        type: Array,
+        required: true
+    }
+});
+
+const cube = ref(null);
+const labelElements = [];
 
 function setLabelRefs(el) {
     if (el && !labelElements.includes(el)) {
-        labelElements.push(el)
+        labelElements.push(el);
     }
 }
 
-const sites = [
-    { label: 'Site 1', url: 'https://example.com' },
-    { label: 'Site 2', url: 'https://example2.com' },
-    { label: 'Site 3', url: 'https://example3.com' },
-    { label: 'Site 4', url: 'https://example4.com' },
-    { label: 'Site 5', url: 'https://example5.com' },
-    { label: 'Site 6', url: 'https://example6.com' },
-]
+const faceClasses = ['front', 'bottom', 'right', 'back', 'top', 'left'];
 
-const faceClasses = ['front', 'back', 'right', 'left', 'top', 'bottom']
+const animationClasses = [
+    'DownRight',
+    'DownLeft',
+    'UpRight',
+    'UpLeft'
+];
 
-function inverseMatrix(matrixStr) {
-    const match = matrixStr.match(/matrix3d\((.+)\)/)
-    if (!match) return null
-
-    const m = match[1].split(',').map(parseFloat)
-
-    return [
-        m[0], m[4], m[8], 0,
-        m[1], m[5], m[9], 0,
-        m[2], m[6], m[10], 0,
-        0, 0, 0, 1
-    ].join(',')
-}
+const directions = ['normal', 'reverse'];
 
 onMounted(() => {
-    function updateBillboard() {
-        const transform = getComputedStyle(cube.value).transform
-        const matrix = inverseMatrix(transform)
-
-        if (matrix) {
-            labelElements.forEach(el => {
-                el.style.transform = `matrix3d(${matrix})`
-            })
-        }
-
-        requestAnimationFrame(updateBillboard)
-    }
-
-    labelElements.value = cube.value.querySelectorAll('.label')
-    //updateBillboard()
-})
+    labelElements.value = cube.value.querySelectorAll('.label');
+    const randomIndex = Math.floor(Math.random() * animationClasses.length);
+    const randomClass = animationClasses[randomIndex];
+    const randomDirection = directions[Math.floor(Math.random() * directions.length)];
+    cube.value.classList.add(randomClass, randomDirection);
+    cube.value.querySelectorAll('.face').forEach(face => {
+        face.classList.add('show');
+    });
+});
 </script>
+
+<style>
+@import url("assets/css/cube.css");
+</style>
 
 <style scoped>
 .cube-container {
-    width: 300px;
-    height: 300px;
+    width: 225px;
+    height: 225px;
     margin: 100px auto;
     perspective: 1000px;
 }
@@ -79,59 +68,64 @@ onMounted(() => {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    animation: rotateCube 20s infinite linear;
 }
 
 .face {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 225px;
+    height: 225px;
     background: rgba(0, 255, 0, 0.05);
-    border: 2px solid #0f0;
+    border: 2px solid #00ff00;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    transition: background 0.25s ease-in, box-shadow 0.25s ease-in, border 0.25s ease-in, scale 0.25s ease-in;
+}
+
+.face:hover {
+    background: rgba(244, 3, 11, 0.15);
+    box-shadow: 0 0 10px #F4030B;
+    border: 3px solid #F4030B;
+    scale: 1.035;
 }
 
 .label {
     font-size: 1.5rem;
-    color: #0f0;
-    text-shadow: 0 0 5px #0f0;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
     backface-visibility: hidden;
+    transition: color 0.25s ease-in, text-shadow 0.25s ease-in;
+}
+
+.face:hover .label{
+    color: #F4030B;
+    text-shadow: 0 0 10px #F4030B;
 }
 
 .front {
-    transform: rotateY(0deg) translateZ(150px);
+    transform: rotateY(0deg) translateZ(112.5px);
 }
 
 .back {
-    transform: rotateY(180deg) translateZ(150px);
+    transform: rotateY(180deg) translateZ(112.5px);
 }
 
 .right {
-    transform: rotateY(90deg) translateZ(150px);
+    transform: rotateY(90deg) translateZ(112.5px);
 }
 
 .left {
-    transform: rotateY(-90deg) translateZ(150px);
+    transform: rotateY(-90deg) translateZ(112.5px);
 }
 
 .top {
-    transform: rotateX(90deg) translateZ(150px);
+    transform: rotateX(90deg) translateZ(112.5px);
 }
 
 .bottom {
-    transform: rotateX(-90deg) translateZ(150px);
-}
-
-@keyframes rotateCube {
-    0% {
-        transform: rotateX(0deg) rotateY(0deg);
-    }
-
-    100% {
-        transform: rotateX(360deg) rotateY(720deg);
-    }
+    transform: rotateX(-90deg) translateZ(112.5px);
 }
 </style>

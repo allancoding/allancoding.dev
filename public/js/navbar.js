@@ -19,8 +19,8 @@ function toggleNavbar(close, wait) {
         }
         
         if (isShowing || close) {
-            home.style.height = "calc(100svh - 60px)";
-            home.style.minHeight = "calc(100svh - 60px)";
+            home.style.height = "calc(100svh - 52px)";
+            home.style.minHeight = "calc(100svh - 52px)";
             content.addEventListener("transitionend", function onCollapse() {
                 links.classList.remove("responsive");
                 icon.classList.remove("responsive");
