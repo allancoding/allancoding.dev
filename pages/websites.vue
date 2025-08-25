@@ -14,7 +14,6 @@
             </div>
         </Content>
         <Content title="Friend Sites" subText="My friends have some cool sites too!">
-            
         </Content>
     </div>
 </template>
