@@ -59,7 +59,8 @@ onMounted(() => {
 .cube-container {
     width: 225px;
     height: 225px;
-    margin: 100px auto;
+    margin: 15px;
+    padding: 60px 70px;
     perspective: 1000px;
 }
 
@@ -97,6 +98,8 @@ onMounted(() => {
     color: #00ff00;
     text-shadow: 0 0 5px #00ff00;
     backface-visibility: hidden;
+    margin: 25px;
+    text-align: center;
     transition: color 0.25s ease-in, text-shadow 0.25s ease-in;
 }
 
