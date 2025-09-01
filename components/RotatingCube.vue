@@ -57,8 +57,8 @@ onMounted(() => {
 
 <style scoped>
 .cube-container {
-    width: 225px;
-    height: 225px;
+    width: var(--cube-size);
+    height: var(--cube-size);
     margin: 15px;
     padding: 60px 70px;
     perspective: 1000px;
@@ -73,8 +73,8 @@ onMounted(() => {
 
 .face {
     position: absolute;
-    width: 225px;
-    height: 225px;
+    width: var(--cube-size);
+    height: var(--cube-size);
     background: rgba(0, 255, 0, 0.05);
     border: 2px solid #00ff00;
     display: flex;
@@ -84,6 +84,7 @@ onMounted(() => {
     opacity: 0;
     transition: opacity 0.5s ease-in;
     transition: background 0.25s ease-in, box-shadow 0.25s ease-in, border 0.25s ease-in, scale 0.25s ease-in;
+    backdrop-filter: blur(5px);
 }
 
 .face:hover {
@@ -94,12 +95,12 @@ onMounted(() => {
 }
 
 .label {
-    font-size: 1.5rem;
+    font-size: var(--cube-font-size);
     color: #00ff00;
     text-shadow: 0 0 5px #00ff00;
     backface-visibility: hidden;
     margin: 25px;
-    text-align: center;
+    text-align: center !important;
     transition: color 0.25s ease-in, text-shadow 0.25s ease-in;
 }
 
@@ -109,26 +110,26 @@ onMounted(() => {
 }
 
 .front {
-    transform: rotateY(0deg) translateZ(112.5px);
+    transform: rotateY(0deg) translateZ(calc(var(--cube-size) / 2));
 }
 
 .back {
-    transform: rotateY(180deg) translateZ(112.5px);
+    transform: rotateY(180deg) translateZ(calc(var(--cube-size) / 2));
 }
 
 .right {
-    transform: rotateY(90deg) translateZ(112.5px);
+    transform: rotateY(90deg) translateZ(calc(var(--cube-size) / 2));
 }
 
 .left {
-    transform: rotateY(-90deg) translateZ(112.5px);
+    transform: rotateY(-90deg) translateZ(calc(var(--cube-size) / 2));
 }
 
 .top {
-    transform: rotateX(90deg) translateZ(112.5px);
+    transform: rotateX(90deg) translateZ(calc(var(--cube-size) / 2));
 }
 
 .bottom {
-    transform: rotateX(-90deg) translateZ(112.5px);
+    transform: rotateX(-90deg) translateZ(calc(var(--cube-size) / 2));
 }
 </style>
