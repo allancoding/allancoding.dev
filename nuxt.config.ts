@@ -33,4 +33,12 @@ export default defineNuxtConfig({
     '~/plugins/scrollToTop.client.js',
     '~/plugins/title.js'
   ],
+  
+  vite: {
+    optimizeDeps: {
+      include: [
+        'typed.js',
+      ]
+    }
+  }
 })

@@ -1,39 +1,63 @@
-# This is my portfolio/website
 
-Accessible here: [https://allancoding.dev](https://allancoding.dev/)
+<div align="center">
+	<img src="public/logos/allancoding-big.png" alt="AllanCoding Logo" width="200" />
+	<h1>Allancoding.dev Portfolio</h1>
+	<a href="https://allancoding.dev"><b>Visit Live Site</b></a>
+</div>
 
-See the old version [https://allancoding.dev/v1/](https://allancoding.dev/v1/)
+---
 
-## Tecnologies
+<div align="center">
+	<img src="public/projects/allancoding.dev.png" alt="Site Screenshot" width="800" />
+</div>
 
-This is build with [nuxt3](https://v3.nuxtjs.org/)
+---
 
-### Setup
+## 🚀 Overview
 
-Install the dependencies:
+Welcome to my portfolio website, built with [Nuxt 3](https://v3.nuxtjs.org/). Explore my projects, skills, and more!
+
+See the old version: [allancoding.dev/v1](https://allancoding.dev/v1/)
+
+## 🛠️ Technologies
+
+- Nuxt 3
+- Vue.js
+- Netlify Functions
+- Custom CSS
+
+## 📦 Setup
+
+Install dependencies:
 
 ```bash
 yarn install
 ```
 
-### Development Server
+## 💻 Development
 
-Start the development server on `http://localhost:3000`:
+Start the development server:
 
 ```bash
 yarn dev
 ```
 
-### Production
+## 🏗️ Production
 
-Build the application for production:
+Build for production:
 
 ```bash
 yarn build
 ```
 
-Locally preview production build:
+Preview production build locally:
 
 ```bash
 yarn preview
 ```
+
+---
+
+<div align="center">
+	<img src="public/logos/allancoding-sq.png" alt="AllanCoding Square Logo" width="100" />
+</div>
