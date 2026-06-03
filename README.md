@@ -15,23 +15,16 @@
 
 ## 🚀 Overview
 
-Welcome to my portfolio website, built with [Nuxt 3](https://v3.nuxtjs.org/). Explore my projects, skills, and more!
+Welcome to my portfolio website, built with [Nuxt](https://nuxtjs.org/). Explore my projects, skills, and more!
 
 See the old version: [allancoding.dev/v1](https://allancoding.dev/v1/)
-
-## 🛠️ Technologies
-
-- Nuxt 3
-- Vue.js
-- Netlify Functions
-- Custom CSS
 
 ## 📦 Setup
 
 Install dependencies:
 
 ```bash
-yarn install
+pnpm i
 ```
 
 ## 💻 Development
@@ -39,7 +32,7 @@ yarn install
 Start the development server:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 ## 🏗️ Production
@@ -47,13 +40,13 @@ yarn dev
 Build for production:
 
 ```bash
-yarn build
+pnpm build
 ```
 
 Preview production build locally:
 
 ```bash
-yarn preview
+pnpm preview
 ```
 
 ---
