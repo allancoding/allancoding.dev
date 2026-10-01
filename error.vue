@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import type { NuxtError } from '#app'
-  import type Typed from 'typed.js';
+  import Typed from 'typed.js';
   
   const props = defineProps({
     error: Object as () => NuxtError
@@ -8,7 +8,6 @@
 
   const { $setTitle } = useNuxtApp() as unknown as { $setTitle: (title: string) => void };
   $setTitle(props.error?.statusCode?.toString() || 'Error');
-  const typed = useTypedJs()
   let errorMessage: Typed;
 
   onMounted(() => {
@@ -17,7 +16,7 @@
 
   const runErrorMessage = (start: boolean) => {
     if (start) {
-      errorMessage = typed('#errorMessage', {
+      errorMessage = new Typed('#errorMessage', {
             strings: ['', (props.error?.statusCode?.toString() || 'Error') + ' - ' + (props.error?.message || 'An error occurred')],
             typeSpeed: 70,
             backSpeed: 50,

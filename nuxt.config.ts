@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   app: {
     head: {
@@ -27,18 +27,10 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
   
-  modules: ["nuxt-typedjs", "@nuxt/icon", '@nuxt/image'],
+  modules: ["@nuxt/icon", '@nuxt/image'],
   plugins: [
     '~/plugins/matrixEffect.client.js',
     '~/plugins/scrollToTop.client.js',
     '~/plugins/title.js'
-  ],
-  
-  vite: {
-    optimizeDeps: {
-      include: [
-        'typed.js',
-      ]
-    }
-  }
+  ]
 })

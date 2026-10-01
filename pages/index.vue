@@ -146,7 +146,8 @@
 </template>
 
 <script setup>
-const typed = useTypedJs()
+import Typed from 'typed.js'
+
 const trophySrc = ref('');
 const route = useRoute();
 const router = useRouter();
@@ -162,7 +163,7 @@ onMounted(() => {
     if (route.fullPath.includes('?portfolio')) {
         router.replace('/portfolio');
     }
-    typed('#typing', {
+    new Typed('#typing', {
         strings: ["I'm a software developer", 'I love to code!', 'I know: &#8203;', 'I know: <span class="red">HTML</span>', 'I know: <span class="red">CSS</span>', 'I know: <span class="red">JavaScript</span>', 'I know: <span class="red">Java</span>', 'I know: <span class="red">Python</span>', 'I know: <span class="red">PHP</span>', 'I know: <span class="red">C++</span>', 'I know: <span class="red">Vue</span>', 'I know: <span class="red">Nuxt.js</span>', 'I know: <span class="red">Node.js</span>'],
         typeSpeed: 70,
         backSpeed: 50,

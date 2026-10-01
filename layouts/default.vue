@@ -57,7 +57,6 @@ useHead(() => ({
     transition: all 0.5s ease-in-out;
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
 }
 
 .home {

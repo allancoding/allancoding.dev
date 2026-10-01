@@ -1,6 +1,6 @@
 {
   "name": "allancoding.dev",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "My website and portfolio",
   "main": "index.js",
   "repository": "https://github.com/allancoding/allancoding.dev.git",
@@ -18,10 +18,9 @@
     "@nuxt/image": "^2.1.0",
     "jquery": "^4.0.0",
     "nuxt": "^4.5.2",
-    "nuxt-typedjs": "^1.2.0",
     "textsplitr": "^0.1.1",
-    "typed.js": "^2.0.12",
-    "vue": "^3.5.42"
+    "typed.js": "^2.1.0",
+    "vue": "^3.5.43"
   },
   "devDependencies": {
     "@iconify-json/charm": "^1.2.3",
